@@ -8,7 +8,7 @@
     },
     "content_scripts": [
       {
-        "js": ["./chatgpt.js", "scripts/authentication.js"],
+        "js": ["./chatgpt.js", "scripts/authentication.js", "scripts/selection-action.js"],
         "matches": ["https://*.wikipedia.org/**"]
       }
     ],

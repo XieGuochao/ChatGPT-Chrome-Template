@@ -10,7 +10,7 @@ This template will instrument on Wikipedia pages. You can change the `matches` f
 
 - [x] Initialization.
 - [x] Create a options page and validate the credential storage.
-- [ ] Trigger ChatGPT on text selection.
+- [x] Trigger ChatGPT on text selection.
 
 ## License
 

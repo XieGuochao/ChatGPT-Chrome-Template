@@ -120,24 +120,22 @@ GPTChat.prototype.ask = async function(prompt, options, promptCallback) {
     this.history.push({
         "role": (options && (options.user)) || "user", 
         "content": prompt,
-        "stop_reason": "",
     });
 
-    promptCallback(this);
+    if (promptCallback)
+        promptCallback(this);
 
-    const response = await post_request("/v1/engines/davinci/completions", this.account, {
+    const response = await post_request("/v1/chat/completions", this.account, {
         ...options,
         "model": this.model,
         "messages": this.history,
     });
 
     const answer = response["choices"][0]["message"]["content"];
-    const stop_reason = response["choices"][0]["stop_reason"];
     const role = response["choices"][0]["message"]["role"];
     this.history.push({
         "role": role,
         "content": answer,
-        "stop_reason": stop_reason,
     });
     this.tokenUsages.push({
         "total_tokens": response["choices"][0]["tokens"],
