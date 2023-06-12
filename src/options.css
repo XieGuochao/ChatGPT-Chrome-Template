@@ -1,6 +1,6 @@
 #main-container {
     margin:auto;
-    margin-top: 64px;
+    margin-top: 32px;
     width: 36%;
     min-width: 360px;
     border-radius: 8px;
@@ -38,7 +38,7 @@ option, select {
     width: 100%;
 }
 
-#status {
+/* #status {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 16px;
@@ -49,4 +49,4 @@ option, select {
     padding: 0 10px;
     box-sizing: border-box;
     font-size: 16px;
-}
+} */
