@@ -9,19 +9,21 @@ const history_div = document.createElement("div");
 history_div.id = "chatgpt-history";
 
 const show_button = document.createElement("button");
-show_button.innerHTML = "Ask ChatGPT";
+show_button.innerHTML = "Translate";
 show_button.style.position = "fixed";
 show_button.style.backgroundColor = "blue";
 show_button.style.color = "white";
 show_button.style.display = "none";
-show_button.style.margin = "20px";
+show_button.style.padding = "8px";
+show_button.style.borderRadius = "5px";
+show_button.style.fontSize = "16px";
 document.body.appendChild(show_button);
 
 let is_asking = false;
 function eventHandler(event) {
     const text = window.getSelection().toString();
     if (text.length == 0) {
-        show_button.innerHTML = "Ask ChatGPT";
+        show_button.innerHTML = "Complete with ChatGPT";
         show_button.style.display = "none";
         history_div.style.display = "none";
         is_asking = false;
@@ -62,10 +64,11 @@ history_div.style.display = "none";
 history_div.style.position = "fixed";
 history_div.style.width = "500px";
 history_div.style.backgroundColor = "white";
-history_div.style.margin = "20px";
-history_div.style.padding = "20px";
+history_div.style.padding = "8px";
+history_div.style.marginTop = "16px";
 history_div.style.border = "1px solid black";
-history_div.style.borderRadius = "10px";
+history_div.style.borderRadius = "5px";
+history_div.style.fontSize = "16px";
 
 document.body.appendChild(history_div);
 
@@ -93,7 +96,9 @@ show_button.onclick = async function() {
     if (text.length == 0) {
         return;
     }
-    askChatGPT(text);
+    askChatGPT(`Complete the text:
+
+${text}`);
 }
 
 async function update_history_ui(chat) {
@@ -102,7 +107,7 @@ async function update_history_ui(chat) {
     history_div.style.top = `${parseInt(show_button.style.top) + 30}px`;
     for (const item of chat.history.history) {
         const p = document.createElement("p");
-        p.innerHTML = `${item["role"]}: ${item["content"]}`
+        p.innerHTML = `<i>${item["role"]}: </i> ${item["content"]}`
         history_div.appendChild(p);
     }
     history_div.style.display = "block";
