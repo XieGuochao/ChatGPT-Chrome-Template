@@ -32,12 +32,6 @@ Here's the directory structure so that one could easily extend and build their o
 
 This template is guaranteed to sync with [ChatGPT JS Toolkit](https://github.com/XieGuochao/ChatGPT-JS-Toolkit) for the latest [chatgpt.js](./chatgpt.js). If you would like to update manually, simply downlaod the latest one from [ChatGPT JS Toolkit](https://github.com/XieGuochao/ChatGPT-JS-Toolkit).
 
-## TODO
-
-- [x] Initialization.
-- [x] Create a options page and validate the credential storage.
-- [x] Trigger ChatGPT on text selection.
-
 ## License
 
 [MIT](LICENSE)
