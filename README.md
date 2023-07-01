@@ -20,7 +20,7 @@ Here's the directory structure so that one could easily extend and build their o
 - `/scripts`: The scripts loaded on specific websites.
   - `authentication.js`: Validate credential by querying the available models.
   - `selection-action.js`: Handle the text selection event and query ChatGPT.
-- /src: The `index` and `options` pages.
+- `/src`: The `index` and `options` pages.
   - `index.html`, `index.js` and `index.css`: The index page when clicking on the extension icon.
   - `options.html`, `options.js` and `options.css`: The options page for extension configuartions.
 - `chatgpt.js`: The [ChatGPT JS Toolkit](https://github.com/XieGuochao/ChatGPT-JS-Toolkit).
@@ -29,7 +29,7 @@ Here's the directory structure so that one could easily extend and build their o
 
 ### Update `chatgpt.js`
 
-This template is guaranteed to sync with [ChatGPT JS Toolkit](https://github.com/XieGuochao/ChatGPT-JS-Toolkit) for the latest [chatgpt.js](./chatgpt.js). If you would like to update manually, simply downlaod the latest one from [ChatGPT JS Toolkit](https://github.com/XieGuochao/ChatGPT-JS-Toolkit).
+This template is guaranteed to sync with [ChatGPT JS Toolkit](https://github.com/XieGuochao/ChatGPT-JS-Toolkit) for the latest [chatgpt.js](./chatgpt.js). If you would like to update manually, simply download the latest one from [ChatGPT JS Toolkit](https://github.com/XieGuochao/ChatGPT-JS-Toolkit).
 
 ## License
 
