@@ -9,7 +9,7 @@
     "content_scripts": [
       {
         "js": ["./chatgpt.js", "./utils.js", "scripts/authentication.js", "scripts/selection-action.js"],
-        "matches": ["https://*.wikipedia.org/**"]
+        "matches": ["<all_urls>"]
       }
     ],
     "options_page": "src/options.html",
